@@ -10,7 +10,7 @@ Display and edit reminders due today.
 
 ## Usage
 - Display reminders due today (or overdue) via the keyword `rem`. Alternatively,
-  your can also a
+  you can also use a
   [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) for that.
 	+ <kbd>⏎</kbd>: Complete the reminder.
 	+ <kbd>⌘⏎</kbd>: If the reminder has a URL, open it in the default browser,
