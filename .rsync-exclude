@@ -1,0 +1,28 @@
+# vim: ft=gitignore
+#───────────────────────────────────────────────────────────────────────────────
+
+# git
+.git/
+.gitignore
+
+# Alfred
+prefs.plist
+.rsync-exclude
+
+# docs
+docs/
+LICENSE
+# INFO leading `/` -> ignore only the README in the root, not in subfolders
+/README.md
+
+# build
+Justfile
+.github/
+.build-and-release.sh
+
+# linter & types
+.editorconfig
+.markdownlint.yaml
+jxa-globals.d.ts
+jsconfig.json
+alfred.d.ts
