@@ -40,6 +40,10 @@ brew install keith/formulae/reminders-cli
 [➡️ Download the latest release of this
 workflow.](https://github.com/chrisgrieser/alfred-reminders-companion/releases/latest)
 
+As the workflow uses an unofficial homebrew package, it is not eligible for the
+Alfred Gallery. The workflow nonetheless auto-updates via the
+[OneUpdater](https://github.com/vitorgalvao/alfred-workflows/tree/a2a2984ec4c7b839b7bf45315491c6993ef13444/OneUpdater).
+
 ## Credits
 Icon by [Emoopo-Design](https://macosicons.com/#/u/Emoopo-Design)
 
