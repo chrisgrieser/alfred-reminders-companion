@@ -6,18 +6,42 @@
 
 Display and edit reminders due today.
 
-- [ ] Showcase image to be inserted here.
+<img alt="Showcase" width=70% src="https://github.com/user-attachments/assets/627ef6de-8fe9-4710-8352-2c63e4be5e67">
 
 ## Usage
-- ((Do this)) via the keyword `xxx`.
-- Press the [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/)
-  to ((do this))
+- Display reminders due today (or overdue) via the keyword `rem`. Alternatively,
+  your can also a
+  [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) for that.
+	+ <kbd>⏎</kbd>: Complete the reminder.
+	+ <kbd>⌘⏎</kbd>: If the reminder has a URL, open it in the default browser,
+	  otherwise, copy the reminder's text to the clipboard. Afterward, complete
+	  the reminder.
+	+ <kbd>⌥⏎</kbd>: Edit the reminder in Alfred. (The first line is the reminder
+	  title, the rest is the reminder body.)
+	+ <kbd>⇧⏎</kbd>: "Snooze" the reminder by changing its due date to tomorrow.
+	+ <kbd>⌃⏎</kbd>: Display completed reminders due today as well. Using
+	  <kbd>⏎</kbd> on a completed reminder marks it as uncompleted. The other
+	  modifiers work the same as with uncompleted reminders. Use
+	  <kbd>⌃⏎</kbd> again to hide completed reminders again.
+- Quickly add a new reminder due today with the keyword `qq`. Alternatively, you
+  can also use a
+  [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) to add the
+  currently selected text or current browser tab as a reminder.
+- Add a reminder due at a future date with the keyword `atdate`.
 
 ## Installation
-[➡️ Download the latest release.](https://github.com/chrisgrieser/alfred-reminders-companion/releases/latest)
+This workflow requires the
+[reminders-cli](https://github.com/keith/reminders-cli):
 
-When admitted to the Alfred Gallery, the workflow auto-updates via Alfred's
-workflow-update mechanism.
+```bash
+brew install keith/formulae/reminders-cli
+```
+
+[➡️ Download the latest release of this
+workflow.](https://github.com/chrisgrieser/alfred-reminders-companion/releases/latest)
+
+## Credits
+Icon by [Emoopo-Design](https://macosicons.com/#/u/Emoopo-Design)
 
 <!-- vale Google.FirstPerson = NO -->
 ## About the developer

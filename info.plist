@@ -1192,13 +1192,40 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Requires the [reminders-cli](https://github.com/keith/reminders-cli): `brew install keith/formulae/reminders-cli`
+	<string>## Usage
+- Display reminders due today (or overdue) via the keyword `rem`. Alternatively,
+  your can also a
+  [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) for that.
+	+ &lt;kbd&gt;⏎&lt;/kbd&gt;: Complete the reminder.
+	+ &lt;kbd&gt;⌘⏎&lt;/kbd&gt;: If the reminder has a URL, open it in the default browser,
+	  otherwise, copy the reminder's text to the clipboard. Afterward, complete
+	  the reminder.
+	+ &lt;kbd&gt;⌥⏎&lt;/kbd&gt;: Edit the reminder in Alfred. (The first line is the reminder
+	  title, the rest is the reminder body.)
+	+ &lt;kbd&gt;⇧⏎&lt;/kbd&gt;: "Snooze" the reminder by changing its due date to tomorrow.
+	+ &lt;kbd&gt;⌃⏎&lt;/kbd&gt;: Display completed reminders due today as well. Using
+	  &lt;kbd&gt;⏎&lt;/kbd&gt; on a completed reminder marks it as uncompleted. The other
+	  modifiers work the same as with uncompleted reminders. Use
+	  &lt;kbd&gt;⌃⏎&lt;/kbd&gt; again to hide completed reminders again.
+- Quickly add a new reminder due today with the keyword `qq`. Alternatively, you
+  can also use a
+  [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) to add the
+  currently selected text or current browser tab as a reminder.
+- Add a reminder due at a future date with the keyword `atdate`.
 
----
 
-Icon by [Emoopo-Design](https://macosicons.com/#/u/Emoopo-Design)
+## Installation
+This workflow requires the [reminders-cli](https://github.com/keith/reminders-cli):
 
-Workflow created by [Chris Grieser](https://chris-grieser.de/).</string>
+```bash
+brew install keith/formulae/reminders-cli
+```
+
+
+## Credirts.
+
+- Icon by [Emoopo-Design](https://macosicons.com/#/u/Emoopo-Design).
+- Workflow created by [Chris Grieser](https://chris-grieser.de/).</string>
 	<key>uidata</key>
 	<dict>
 		<key>0F93036F-D158-49BB-97AF-DE600B8A3300</key>
