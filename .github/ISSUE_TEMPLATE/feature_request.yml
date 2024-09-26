@@ -3,15 +3,19 @@ description: Suggest an idea
 title: "Feature Request: "
 labels: ["enhancement"]
 body:
-  - type: checkboxes
-    id: checklist
+  - type: markdown
     attributes:
-      label: Checklist
-      options:
-        - label: "I have read the plugin's documentation."
-          required: true
-        - label: The feature would be useful to more users than just me.
-          required: true
+      value: |
+        ## Important
+        Please be aware that I am reluctant to implement any feature requests at
+        all for this workflow. Reason being that task management is very personal,
+        and there are hundreds of different workflows and needs for it, and
+        implementing them all will be close to impossible.
+
+        This workflow is focussed on managing tasks due today, and nothing more.
+        If you think you have a suggestion for a new feature that fits the spirit
+        of this workflow, you can open a feature request. Just be aware that
+        it's not unlikely that the suggestion will be rejected.
   - type: textarea
     id: feature-requested
     attributes:
