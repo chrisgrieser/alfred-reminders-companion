@@ -806,6 +806,37 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<true/>
+				<key>focusedappvariablename</key>
+				<string>focusedapp</string>
+				<key>hotkey</key>
+				<integer>1</integer>
+				<key>hotmod</key>
+				<integer>1835008</integer>
+				<key>hotstring</key>
+				<string>S</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>2</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>63FD13B2-4520-4BF7-B444-C84531F947E1</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>conditions</key>
 				<array>
 					<dict>
@@ -1061,37 +1092,6 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<true/>
-				<key>focusedappvariablename</key>
-				<string>focusedapp</string>
-				<key>hotkey</key>
-				<integer>1</integer>
-				<key>hotmod</key>
-				<integer>1835008</integer>
-				<key>hotstring</key>
-				<string>S</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>2</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>63FD13B2-4520-4BF7-B444-C84531F947E1</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -1107,6 +1107,27 @@ fi</string>
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>5FF59D05-FE74-43DD-9589-1CFF471C8A6A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>{var:quickadd_reminder_keyword}</string>
+				<key>subtext</key>
+				<string>today</string>
+				<key>text</key>
+				<string>➕ Add Reminder: {query}</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>BD7716E2-05C1-4CD2-9B1C-5FD044289103</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1132,27 +1153,6 @@ fi</string>
 			<string>0F93036F-D158-49BB-97AF-DE600B8A3300</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>{var:quickadd_reminder_keyword}</string>
-				<key>subtext</key>
-				<string>today</string>
-				<key>text</key>
-				<string>➕ Add Reminder: {query}</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>BD7716E2-05C1-4CD2-9B1C-5FD044289103</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1210,27 +1210,6 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>✅ Added Reminder ({var:selectedDate})</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>83927C8F-D55B-4E36-B93D-23927B1808D5</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -1280,6 +1259,27 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>✅ Added Reminder ({var:selectedDate})</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>83927C8F-D55B-4E36-B93D-23927B1808D5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -1310,17 +1310,17 @@ fi</string>
 	+ &lt;kbd&gt;⌘⏎&lt;/kbd&gt;: If the reminder has a URL, open it in the default browser,
 	  otherwise, copy the reminder's text to the clipboard. Afterward, complete
 	  the reminder.
-	+ &lt;kbd&gt;⌥⏎&lt;/kbd&gt;: Edit the reminder in Alfred. (The first line is the reminder
-	  title, the rest is the reminder body.)
+	+ &lt;kbd&gt;⌥⏎&lt;/kbd&gt;: Edit the reminder in Alfred. (The first line is the
+	  reminder title, the rest is the reminder body.)
 	+ &lt;kbd&gt;⇧⏎&lt;/kbd&gt;: "Snooze" the reminder by changing its due date to tomorrow.
 	+ &lt;kbd&gt;⌃⏎&lt;/kbd&gt;: Display completed reminders due today as well. Using
 	  &lt;kbd&gt;⏎&lt;/kbd&gt; on a completed reminder marks it as uncompleted. The other
-	  modifiers work the same as with uncompleted reminders. Use
-	  &lt;kbd&gt;⌃⏎&lt;/kbd&gt; again to hide completed reminders again.
+	  modifiers work the same as with uncompleted reminders. Use &lt;kbd&gt;⌃⏎&lt;/kbd&gt;
+	  again to hide completed reminders again.
 - Quickly add a new reminder due today with the keyword `qq`. Alternatively, you
   can also use a
-  [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) to add the
-  currently selected text or current browser tab as a reminder.
+  [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) to add
+  the currently selected text or current browser tab as a reminder.
 - Add a reminder due at a future date with the keyword `atdate`.
 
 
@@ -1332,8 +1332,7 @@ brew install keith/formulae/reminders-cli
 ```
 
 
-## Credirts.
-
+## Credits
 - Icon by [Emoopo-Design](https://macosicons.com/#/u/Emoopo-Design).
 - Workflow created by [Chris Grieser](https://chris-grieser.de/).</string>
 	<key>uidata</key>
@@ -1343,9 +1342,9 @@ brew install keith/formulae/reminders-cli
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<real>210</real>
+			<real>455</real>
 			<key>ypos</key>
-			<real>875</real>
+			<real>850</real>
 		</dict>
 		<key>1486415C-BA88-4276-A021-3773113CAF94</key>
 		<dict>
@@ -1361,9 +1360,9 @@ brew install keith/formulae/reminders-cli
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<real>455</real>
+			<real>700</real>
 			<key>ypos</key>
-			<real>890</real>
+			<real>865</real>
 		</dict>
 		<key>1F28B1D0-95DD-4F7F-BB2A-018A98C5743B</key>
 		<dict>
@@ -1417,9 +1416,9 @@ brew install keith/formulae/reminders-cli
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<real>360</real>
+			<real>605</real>
 			<key>ypos</key>
-			<real>895</real>
+			<real>870</real>
 		</dict>
 		<key>45E222F3-9910-4038-AA60-1ABC01E95D81</key>
 		<dict>
@@ -1428,7 +1427,7 @@ brew install keith/formulae/reminders-cli
 			<key>note</key>
 			<string>select reminder</string>
 			<key>xpos</key>
-			<real>275</real>
+			<real>240</real>
 			<key>ypos</key>
 			<real>260</real>
 		</dict>
@@ -1475,21 +1474,21 @@ brew install keith/formulae/reminders-cli
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<real>455</real>
+			<real>700</real>
 			<key>ypos</key>
-			<real>765</real>
+			<real>740</real>
 		</dict>
 		<key>63FD13B2-4520-4BF7-B444-C84531F947E1</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>2</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>DOUBLE CLICK THIS
 to set a hotkey to quick add selected text or browser tab</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>705</real>
+			<real>440</real>
 		</dict>
 		<key>6DBE7C33-DE4C-4B1D-8831-E8F02E6FB3D6</key>
 		<dict>
@@ -1512,7 +1511,7 @@ to set a hotkey to quick add selected text or browser tab</string>
 		<key>76767F1C-52B8-425C-8621-F7E67C523434</key>
 		<dict>
 			<key>colorindex</key>
-			<integer>7</integer>
+			<integer>9</integer>
 			<key>note</key>
 			<string>DOUBLE CLICK THIS
 to set a hotkey to show reminders due today</string>
@@ -1526,9 +1525,9 @@ to set a hotkey to show reminders due today</string>
 			<key>colorindex</key>
 			<integer>2</integer>
 			<key>xpos</key>
-			<real>455</real>
+			<real>700</real>
 			<key>ypos</key>
-			<real>1010</real>
+			<real>985</real>
 		</dict>
 		<key>91C4C097-7401-4742-A061-9BF771AD2D00</key>
 		<dict>
@@ -1537,9 +1536,9 @@ to set a hotkey to show reminders due today</string>
 			<key>note</key>
 			<string>quick add today at future date</string>
 			<key>xpos</key>
-			<real>30</real>
+			<real>240</real>
 			<key>ypos</key>
-			<real>1010</real>
+			<real>980</real>
 		</dict>
 		<key>A6117B6C-7738-4FC1-8297-B72F0FEEB9CC</key>
 		<dict>
@@ -1588,9 +1587,9 @@ to set a hotkey to show reminders due today</string>
 			<key>note</key>
 			<string>quick add today</string>
 			<key>xpos</key>
-			<real>30</real>
+			<real>240</real>
 			<key>ypos</key>
-			<real>875</real>
+			<real>845</real>
 		</dict>
 		<key>CD1F34B1-A599-4F46-928B-198B877B88A8</key>
 		<dict>
@@ -1599,9 +1598,9 @@ to set a hotkey to show reminders due today</string>
 			<key>note</key>
 			<string>add at date</string>
 			<key>xpos</key>
-			<real>210</real>
+			<real>455</real>
 			<key>ypos</key>
-			<real>1010</real>
+			<real>985</real>
 		</dict>
 		<key>DA53DB8C-C97B-4594-A26E-0875AB96D262</key>
 		<dict>

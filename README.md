@@ -16,17 +16,17 @@ Display and edit reminders due today.
 	+ <kbd>⌘⏎</kbd>: If the reminder has a URL, open it in the default browser,
 	  otherwise, copy the reminder's text to the clipboard. Afterward, complete
 	  the reminder.
-	+ <kbd>⌥⏎</kbd>: Edit the reminder in Alfred. (The first line is the reminder
-	  title, the rest is the reminder body.)
+	+ <kbd>⌥⏎</kbd>: Edit the reminder in Alfred. (The first line is the
+	  reminder title, the rest is the reminder body.)
 	+ <kbd>⇧⏎</kbd>: "Snooze" the reminder by changing its due date to tomorrow.
 	+ <kbd>⌃⏎</kbd>: Display completed reminders due today as well. Using
 	  <kbd>⏎</kbd> on a completed reminder marks it as uncompleted. The other
-	  modifiers work the same as with uncompleted reminders. Use
-	  <kbd>⌃⏎</kbd> again to hide completed reminders again.
+	  modifiers work the same as with uncompleted reminders. Use <kbd>⌃⏎</kbd>
+	  again to hide completed reminders again.
 - Quickly add a new reminder due today with the keyword `qq`. Alternatively, you
   can also use a
-  [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) to add the
-  currently selected text or current browser tab as a reminder.
+  [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) to add
+  the currently selected text or current browser tab as a reminder.
 - Add a reminder due at a future date with the keyword `atdate`.
 
 ## Installation
