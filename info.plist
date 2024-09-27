@@ -1304,7 +1304,7 @@ fi</string>
 	<key>readme</key>
 	<string>## Usage
 - Display reminders due today (or overdue) via the keyword `rem`. Alternatively,
-  your can also a
+  you can also use a
   [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) for that.
 	+ &lt;kbd&gt;⏎&lt;/kbd&gt;: Complete the reminder.
 	+ &lt;kbd&gt;⌘⏎&lt;/kbd&gt;: If the reminder has a URL, open it in the default browser,
