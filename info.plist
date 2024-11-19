@@ -1395,7 +1395,7 @@ fi</string>
 	  &lt;kbd&gt;⏎&lt;/kbd&gt; on a completed reminder marks it as uncompleted. The other
 	  modifiers work the same as with uncompleted reminders. Use &lt;kbd&gt;⌃⏎&lt;/kbd&gt;
 	  again to hide completed reminders again.
-	+ &lt;kbd&gt;fn⏎&lt;/kbd&gt;: Increase the reminder's priority by one level (or reset it
+	+ &lt;kbd&gt;Fn⏎&lt;/kbd&gt;: Increase the reminder's priority by one level (or reset it
 	  to "none," if already at the highest priority).
 - Quickly add a new reminder due today with the keyword `qq`. Alternatively, you
   can also use a
