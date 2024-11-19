@@ -23,6 +23,8 @@ Display and edit reminders due today.
 	  <kbd>⏎</kbd> on a completed reminder marks it as uncompleted. The other
 	  modifiers work the same as with uncompleted reminders. Use <kbd>⌃⏎</kbd>
 	  again to hide completed reminders again.
+	+ <kbd>fn⏎</kbd>: Increase the reminder's priority by one level (or reset it
+	  to "none," if already at the highest priority).
 - Quickly add a new reminder due today with the keyword `qq`. Alternatively, you
   can also use a
   [hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) to add

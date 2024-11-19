@@ -6,7 +6,7 @@ app.includeStandardAdditions = true;
 
 /** @typedef {Object} reminderObj
  * @property {string} title
- * @property {number} priority
+ * @property {0|1|5|9} priority 0 = None, 9 = Low, 5 = Medium, 1 = High
  * @property {string} list
  * @property {string} notes
  * @property {string} externalId
@@ -21,6 +21,30 @@ const isToday = (/** @type {Date} */ aDate) => {
 
 const urlRegex =
 	/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)/;
+
+// SIC `reminders show` return priority as number, `reminders add` requires string…
+const prioIntToStr = {
+	0: "none",
+	9: "low",
+	5: "medium",
+	1: "high",
+};
+
+// mimic the display of priorities in the Reminders app
+const prioIntToEmoji = {
+	0: "",
+	9: "!",
+	5: "! !",
+	1: "! ! !",
+};
+
+// SIC numbers do not comply with order of priorities…
+const prioIntToOrder = {
+	0: 0,
+	9: 1,
+	5: 2,
+	1: 3,
+};
 
 //───────────────────────────────────────────────────────────────────────────
 
@@ -41,20 +65,24 @@ function run() {
 
 	/** @type {reminderObj[]} */
 	const responseJson = JSON.parse(app.doShellScript(shellCmd));
-	const remindersFiltered = responseJson.filter((rem) => {
-		const dueDate = rem.dueDate && new Date(rem.dueDate);
-		const noDueDate = rem.dueDate === undefined;
-		const openAndDueBeforeToday = !rem.isCompleted && dueDate < today;
-		const completedAndDueToday = rem.isCompleted && dueDate && isToday(dueDate);
-		return openAndDueBeforeToday || completedAndDueToday || noDueDate;
-	});
+	const remindersFiltered = responseJson
+		.filter((rem) => {
+			const dueDate = rem.dueDate && new Date(rem.dueDate);
+			const noDueDate = rem.dueDate === undefined;
+			const openAndDueBeforeToday = !rem.isCompleted && dueDate < today;
+			const completedAndDueToday = rem.isCompleted && dueDate && isToday(dueDate);
+			return openAndDueBeforeToday || completedAndDueToday || noDueDate;
+		})
+		.sort((a, b) => prioIntToOrder[b.priority] - prioIntToOrder[a.priority]);
+	const remindersLeftLater = remindersFiltered.length - 1;
 
 	/** @type {AlfredItem[]} */
 	const reminders = remindersFiltered.map((rem) => {
-		const { title, notes, externalId, isCompleted, dueDate } = rem;
+		const { title, notes, externalId, isCompleted, dueDate, priority } = rem;
 		const body = notes || "";
 		const displayBody = body.trim().replace(/\n+/g, " · ");
 		const content = title + "\n" + body;
+		const prioDisplay = prioIntToEmoji[priority] ? prioIntToEmoji[priority] + "  " : "";
 
 		const [url] = content.match(urlRegex) || [];
 		let emoji = isCompleted ? "☑️ " : "";
@@ -65,19 +93,20 @@ function run() {
 		/** @type {AlfredItem} */
 		const alfredItem = {
 			title: emoji + title,
-			subtitle: displayBody,
+			subtitle: prioDisplay + displayBody,
 			text: { copy: content, largetype: content },
 			variables: {
 				id: externalId,
 				title: title,
 				body: body,
+				priority: prioIntToStr[priority],
 				notificationTitle: isCompleted ? "🔲 Uncompleted" : "☑️ Completed",
 				mode: isCompleted ? "uncomplete" : "complete",
 				cmdMode: url ? "open-url" : "copy", // only for cmd
 				isCompleted: isCompleted.toString(), // only for cmd
 				showCompleted: showCompleted.toString(),
 				remindersLeftNow: true.toString(),
-				remindersLeftLater: remindersFiltered.length - 1, // for deciding whether to loop back
+				remindersLeftLater: remindersLeftLater, // for deciding whether to loop back
 			},
 			mods: {
 				// open URL/copy
@@ -87,14 +116,10 @@ function run() {
 						(url ? "⌘: Open URL" : "⌘: Copy") + (isCompleted ? "" : " and mark as completed"),
 				},
 				// edit content
-				alt: {
-					arg: content,
-				},
+				alt: { arg: content },
 				// toggle completed
 				ctrl: {
-					variables: {
-						showCompleted: (!showCompleted).toString(),
-					},
+					variables: { showCompleted: (!showCompleted).toString() },
 				},
 			},
 		};
@@ -119,5 +144,8 @@ function run() {
 		});
 	}
 
-	return JSON.stringify({ items: reminders });
+	return JSON.stringify({
+		items: reminders,
+		skipknowledge: true, // keep sorting by priority, not by usage
+	});
 }
