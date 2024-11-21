@@ -22,6 +22,8 @@ const isToday = (/** @type {Date} */ aDate) => {
 const urlRegex =
 	/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)/;
 
+//──────────────────────────────────────────────────────────────────────────────
+
 // SIC `reminders show` return priority as number, `reminders add` requires string…
 const prioIntToStr = {
 	0: "none",
@@ -33,9 +35,9 @@ const prioIntToStr = {
 // mimic the display of priorities in the Reminders app
 const prioIntToEmoji = {
 	0: "",
-	9: "!",
-	5: "! !",
-	1: "! ! !",
+	9: "❇️",
+	5: "❇️❇️",
+	1: "❇️❇️❇️",
 };
 
 // SIC numbers do not comply with order of priorities…
