@@ -513,7 +513,7 @@
 				<key>fontsizing</key>
 				<integer>0</integer>
 				<key>footertext</key>
-				<string>⎋: Cancel  ⏎: Saves Changes   ♦   ⇧⏎: Insert Line Break   ♦   1st line: title, remaining lines: notes</string>
+				<string>⎋: Cancel       ⏎: Saves Changes       ⇧⏎: Insert Line Break       1st line: title, remaining lines: notes</string>
 				<key>inputfile</key>
 				<string></string>
 				<key>inputtype</key>
@@ -1421,6 +1421,8 @@ brew install keith/formulae/reminders-cli
 		<dict>
 			<key>colorindex</key>
 			<integer>2</integer>
+			<key>note</key>
+			<string>add reminder</string>
 			<key>xpos</key>
 			<real>495</real>
 			<key>ypos</key>
